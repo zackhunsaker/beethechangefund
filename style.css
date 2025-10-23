@@ -1,92 +1,92 @@
-/* ===== Theme + reset ===== */
-:root{
-  --bee-yellow:#ffcc00;
-  --paper:#fff8e7;
-  --ink:#333;
-  --card:#fff;
-  --shadow:0 2px 10px rgba(0,0,0,.08);
-  --venmo:#3d95ce;        /* Venmo-like blue */
-  --venmo-hover:#327aa8;
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--paper);
-  color: var(--ink);
-  line-height: 1.55;
+/* ===== COLORS ===== */
+:root {
+  --yellow: #ffcc00;
+  --light-bg: #fff8e7;
+  --blue: #3d95ce;
+  --blue-hover: #327aa8;
+  --text: #333;
 }
 
-/* ===== Header / Footer ===== */
-.site-header{
-  background: var(--bee-yellow);
-  text-align:center;
-  padding: 24px 12px;
-}
-.site-header h1{ margin:0 0 6px 0; font-size:2rem; }
-.site-header p{ margin:0; font-weight:500; }
-
-.site-footer{
-  background: var(--bee-yellow);
-  text-align:center;
-  padding:12px;
-  margin-top:36px;
-  font-weight:700;
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* ===== Centered page layout ===== */
-.container{
-  max-width: 760px;      /* tighter centered column like your good screenshot */
-  margin: 0 auto;        /* centers the content */
-  padding: 20px 14px;
+/* ===== HEADER ===== */
+header {
+  width: 100%;
+  background-color: var(--yellow);
+  text-align: center;
+  padding: 25px 10px;
+}
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+header p {
+  font-weight: 500;
+}
+
+/* ===== MAIN ===== */
+main {
+  max-width: 600px;
+  width: 90%;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* ===== Cards ===== */
-.card{
-  background: var(--card);
-  border-radius: 12px;
+/* ===== CARD ===== */
+.card {
+  background-color: white;
   padding: 20px;
-  box-shadow: var(--shadow);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.card h2{ margin:0 0 10px 0; color:#222; }
-
-/* ===== Lists ===== */
-.bullet-list{
-  list-style: disc;
-  margin: 0 0 14px 0;
-  padding-left: 24px;              /* start of list text */
+.card h2 {
+  margin-bottom: 10px;
 }
-.bullet-list li{ margin: 6px 0; }
-
-/* ===== Donate button (no bullet, aligned under list text) ===== */
-.donate-row{
-  margin-left: 24px;               /* lines up with list text */
-  margin-top: 6px;
-}
-.donate-button{
-  display:inline-block;
-  background: var(--venmo);
-  color:#fff;
-  text-decoration:none;
-  padding:12px 22px;
-  border-radius:8px;
-  font-weight:700;
-  transition: background .2s, transform .1s;
-}
-.donate-button:hover{
-  background: var(--venmo-hover);
-  transform: scale(1.04);
+.card ul {
+  margin-left: 20px;
+  margin-bottom: 12px;
 }
 
-/* Links */
-a{ color:#1a73e8; }
-a:hover{ text-decoration: underline; }
+/* ===== DONATE BUTTON ===== */
+.donate-button {
+  display: inline-block;
+  background-color: var(--blue);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.1s;
+  margin-left: 20px; /* aligns with list text */
+}
+.donate-button:hover {
+  background-color: var(--blue-hover);
+  transform: scale(1.05);
+}
 
-/* Small screens */
-@media (max-width:520px){
-  .donate-button{ padding:10px 18px; }
+/* ===== FOOTER ===== */
+footer {
+  width: 100%;
+  background-color: var(--yellow);
+  text-align: center;
+  padding: 12px;
+  margin-top: 40px;
+  font-weight: bold;
 }
