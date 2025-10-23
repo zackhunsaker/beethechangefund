@@ -1,11 +1,11 @@
-/* ===== Base ===== */
+/* ===== Theme + reset ===== */
 :root{
   --bee-yellow:#ffcc00;
   --paper:#fff8e7;
-  --ink:#333333;
-  --card:#ffffff;
+  --ink:#333;
+  --card:#fff;
   --shadow:0 2px 10px rgba(0,0,0,.08);
-  --venmo:#3d95ce; /* Venmo-like blue */
+  --venmo:#3d95ce;        /* Venmo-like blue */
   --venmo-hover:#327aa8;
 }
 
@@ -24,27 +24,21 @@ body{
   text-align:center;
   padding: 24px 12px;
 }
-.site-header h1{
-  margin:0 0 6px 0;
-  font-size: 2rem;
-}
-.site-header p{
-  margin:0;
-  font-weight: 500;
-}
+.site-header h1{ margin:0 0 6px 0; font-size:2rem; }
+.site-header p{ margin:0; font-weight:500; }
 
 .site-footer{
   background: var(--bee-yellow);
   text-align:center;
-  padding: 12px;
-  margin-top: 36px;
-  font-weight: 700;
+  padding:12px;
+  margin-top:36px;
+  font-weight:700;
 }
 
-/* ===== Layout ===== */
+/* ===== Centered page layout ===== */
 .container{
-  max-width: 960px;            /* centers the page content */
-  margin: 0 auto;              /* THIS centers it */
+  max-width: 760px;      /* tighter centered column like your good screenshot */
+  margin: 0 auto;        /* centers the content */
   padding: 20px 14px;
   display: flex;
   flex-direction: column;
@@ -58,32 +52,29 @@ body{
   padding: 20px;
   box-shadow: var(--shadow);
 }
-.card h2{
-  margin: 0 0 10px 0;
-  color:#222;
-}
+.card h2{ margin:0 0 10px 0; color:#222; }
 
 /* ===== Lists ===== */
 .bullet-list{
   list-style: disc;
   margin: 0 0 14px 0;
-  padding-left: 24px;
+  padding-left: 24px;              /* start of list text */
 }
 .bullet-list li{ margin: 6px 0; }
 
-/* ===== Donate Button (no bullet) ===== */
+/* ===== Donate button (no bullet, aligned under list text) ===== */
 .donate-row{
-  /* align visually under list text but not a list item */
-  margin-left: 24px;     /* nudge to the right */
+  margin-left: 24px;               /* lines up with list text */
+  margin-top: 6px;
 }
 .donate-button{
-  display: inline-block;
+  display:inline-block;
   background: var(--venmo);
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 22px;
-  border-radius: 8px;
-  font-weight: 700;
+  color:#fff;
+  text-decoration:none;
+  padding:12px 22px;
+  border-radius:8px;
+  font-weight:700;
   transition: background .2s, transform .1s;
 }
 .donate-button:hover{
@@ -91,11 +82,11 @@ body{
   transform: scale(1.04);
 }
 
-/* ===== Links ===== */
+/* Links */
 a{ color:#1a73e8; }
 a:hover{ text-decoration: underline; }
 
-/* ===== Responsive tweak ===== */
-@media (max-width: 520px){
-  .donate-button{ padding: 10px 18px; }
+/* Small screens */
+@media (max-width:520px){
+  .donate-button{ padding:10px 18px; }
 }
