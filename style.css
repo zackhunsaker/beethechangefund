@@ -1,4 +1,4 @@
-/* --- Reset --- */
+/* Reset + general styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,46 +6,60 @@ body {
   color: #333;
 }
 
-/* --- Header --- */
+/* Header */
 header {
   background-color: #ffcc00;
   text-align: center;
   padding: 20px 10px;
 }
-header h1 { margin: 0; font-size: 2rem; }
-header p { margin-top: 5px; font-size: 1rem; font-weight: 500; }
 
-/* --- Layout --- */
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Card sections */
 main {
-  max-width: 700px;
-  margin: 40px auto; /* centers and adds top/bottom spacing */
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 35px; /* more space between boxes */
+  gap: 30px;           /* more space between boxes */
+  max-width: 750px;    /* keeps it centered like your old layout */
+  margin: 0 auto;      /* centers horizontally */
 }
 
-/* --- Cards --- */
 .card {
-  background: #fff;
-  padding: 25px;
+  background: white;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-h2 { color: #222; margin-bottom: 12px; }
 
-/* --- Lists --- */
+/* Headings */
+h2 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Lists */
 ul {
   list-style-type: disc;
-  padding-left: 22px;
+  padding-left: 20px;
   margin-bottom: 15px;
 }
 
-/* --- Donate Button --- */
+/* Donate button */
 .donate-container {
   margin-top: 15px;
-  padding-left: 24px; /* aligns with bullets */
+  text-align: center;
 }
+
 .donate-button {
   background-color: #3d95ce;
   color: white;
@@ -56,22 +70,24 @@ ul {
   display: inline-block;
   transition: background-color 0.2s, transform 0.1s;
 }
+
 .donate-button:hover {
   background-color: #327aa8;
+  text-decoration: none;
   transform: scale(1.05);
 }
 
-/* --- Contact Section --- */
+/* Contact section spacing */
 .contact-card p {
-  margin: 10px 0;
-  line-height: 1.6;
+  margin: 10px 0;     /* adds spacing between contact lines */
+  line-height: 1.6;   /* makes contact info easier to read */
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
   background-color: #ffcc00;
   text-align: center;
-  padding: 12px;
-  margin-top: 60px; /* keeps it lower on page */
+  padding: 10px;
+  margin-top: 60px;   /* pushes footer closer to bottom */
   font-weight: bold;
 }
