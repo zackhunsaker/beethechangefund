@@ -1,92 +1,94 @@
-/* ===== RESET ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ===== Reset ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ===== Theme ===== */
+:root{
+  --bee-yellow:#ffcc00;
+  --paper:#fff8e7;
+  --ink:#333;
+  --card:#fff;
+  --shadow:0 2px 10px rgba(0,0,0,.08);
+  --venmo:#3d95ce;
+  --venmo-hover:#327aa8;
 }
 
-/* ===== COLORS ===== */
-:root {
-  --yellow: #ffcc00;
-  --light-bg: #fff8e7;
-  --blue: #3d95ce;
-  --blue-hover: #327aa8;
-  --text: #333;
+/* ===== Base ===== */
+html, body { height: 100%; }
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
 }
 
-/* ===== BODY ===== */
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--light-bg);
-  color: var(--text);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* ===== Header / Footer ===== */
+.site-header{
+  background: var(--bee-yellow);
+  text-align:center;
+  padding: 24px 12px;
+}
+.site-header h1{ margin-bottom:6px; font-size:2rem; }
+.site-header p{ font-weight:500; }
+
+.site-footer{
+  background: var(--bee-yellow);
+  text-align:center;
+  padding:12px;
+  margin-top:36px;
+  font-weight:700;
 }
 
-/* ===== HEADER ===== */
-header {
-  width: 100%;
-  background-color: var(--yellow);
-  text-align: center;
-  padding: 25px 10px;
-}
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 5px;
-}
-header p {
-  font-weight: 500;
-}
-
-/* ===== MAIN ===== */
-main {
-  max-width: 600px;
-  width: 90%;
-  margin-top: 30px;
+/* ===== Centered column ===== */
+.container{
+  max-width: 760px;       /* <- classic centered width (matches your good pic) */
+  margin: 24px auto;      /* <- centers the stack */
+  padding: 0 16px;        /* side breathing room on phones */
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* ===== CARD ===== */
-.card {
-  background-color: white;
+/* ===== Cards ===== */
+.card{
+  background: var(--card);
+  border-radius: 12px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow);
 }
-.card h2 {
-  margin-bottom: 10px;
-}
-.card ul {
-  margin-left: 20px;
+.card h2{ margin-bottom: 10px; color:#222; }
+
+/* ===== Lists ===== */
+.bullet-list{
+  list-style: disc;
+  padding-left: 24px;
   margin-bottom: 12px;
 }
+.bullet-list li{ margin: 6px 0; }
 
-/* ===== DONATE BUTTON ===== */
-.donate-button {
+/* ===== Donate button (no bullet) ===== */
+.donate-row{
+  margin-left: 24px;      /* lines the button up with list text */
+  margin-top: 6px;
+}
+.donate-button{
   display: inline-block;
-  background-color: var(--blue);
-  color: white;
-  padding: 12px 24px;
+  background: var(--venmo);
+  color:#fff;
+  text-decoration:none;
+  padding: 12px 22px;
   border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s, transform 0.1s;
-  margin-left: 20px; /* aligns with list text */
+  font-weight: 700;
+  transition: background .2s, transform .1s;
 }
-.donate-button:hover {
-  background-color: var(--blue-hover);
-  transform: scale(1.05);
+.donate-button:hover{
+  background: var(--venmo-hover);
+  transform: scale(1.04);
 }
 
-/* ===== FOOTER ===== */
-footer {
-  width: 100%;
-  background-color: var(--yellow);
-  text-align: center;
-  padding: 12px;
-  margin-top: 40px;
-  font-weight: bold;
+/* Links */
+a{ color:#1a73e8; }
+a:hover{ text-decoration: underline; }
+
+/* Small screens */
+@media (max-width:520px){
+  .donate-button{ padding:10px 18px; }
 }
