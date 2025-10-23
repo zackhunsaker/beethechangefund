@@ -1,4 +1,4 @@
-/* Reset + general styling */
+/* General reset */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -24,7 +24,7 @@ header p {
   font-weight: 500;
 }
 
-/* Card sections */
+/* Main content area */
 main {
   padding: 20px;
   display: flex;
@@ -32,6 +32,7 @@ main {
   gap: 20px;
 }
 
+/* Card styling */
 .card {
   background: white;
   padding: 20px;
@@ -39,7 +40,7 @@ main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings */
+/* Section titles */
 h2 {
   color: #222;
   margin-bottom: 10px;
@@ -54,8 +55,9 @@ ul {
 
 /* Donate button */
 .donate-container {
-  margin-top: 15px;
-  text-align: center;
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 25px; /* moves it slightly right */
 }
 
 .donate-button {
@@ -82,28 +84,4 @@ footer {
   padding: 10px;
   margin-top: 30px;
   font-weight: bold;
-}
-
-
-
-.help-list {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.donate-inline {
-  background-color: #3d95ce;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 5px;
-  transition: background-color 0.2s, transform 0.1s;
-}
-
-.donate-inline:hover {
-  background-color: #327aa8;
-  text-decoration: none;
-  transform: scale(1.05);
 }
