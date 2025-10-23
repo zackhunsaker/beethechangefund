@@ -1,51 +1,85 @@
+/* Reset + general styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #fffaf0;
+  margin: 0;
+  background-color: #fff8e7;
   color: #333;
-  text-align: center;
-  line-height: 1.6;
-  margin: 0;
 }
 
+/* Header */
 header {
-  background: #fcd703;
-  padding: 30px 15px;
+  background-color: #ffcc00;
+  text-align: center;
+  padding: 20px 10px;
 }
 
-h1 {
+header h1 {
   margin: 0;
-  color: #222;
+  font-size: 2rem;
 }
 
-section {
-  margin: 20px auto;
-  max-width: 600px;
-  text-align: left;
-  background: #fff;
+header p {
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Card sections */
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-  background: #fcd703;
-  padding: 10px;
-  font-weight: bold;
+/* Headings */
+h2 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Lists */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+/* Donate button */
+.donate-container {
+  margin-top: 15px;
+  text-align: center;
 }
 
 .donate-button {
   background-color: #3d95ce;
   color: white;
-  padding: 10px 18px;
+  padding: 12px 22px;
   border-radius: 8px;
-  text-decoration: none; /* removes underline */
+  text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.2s;
+  display: inline-block;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 .donate-button:hover {
   background-color: #327aa8;
-  text-decoration: none; /* keeps it off even when hovering */
+  text-decoration: none;
+  transform: scale(1.05);
 }
 
-
+/* Footer */
+footer {
+  background-color: #ffcc00;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  font-weight: bold;
+}
