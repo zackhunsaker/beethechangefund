@@ -83,3 +83,27 @@ footer {
   margin-top: 30px;
   font-weight: bold;
 }
+
+
+
+.help-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.donate-inline {
+  background-color: #3d95ce;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.donate-inline:hover {
+  background-color: #327aa8;
+  text-decoration: none;
+  transform: scale(1.05);
+}
