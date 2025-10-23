@@ -32,3 +32,19 @@ footer {
   padding: 10px;
   font-weight: bold;
 }
+
+.donate-button {
+  background-color: #3d95ce;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.donate-button:hover {
+  background-color: #327aa8;
+}
+
+
