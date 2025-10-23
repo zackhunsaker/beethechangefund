@@ -38,13 +38,14 @@ footer {
   color: white;
   padding: 10px 18px;
   border-radius: 8px;
-  text-decoration: none;
+  text-decoration: none; /* removes underline */
   font-weight: bold;
   transition: background-color 0.2s;
 }
 
 .donate-button:hover {
   background-color: #327aa8;
+  text-decoration: none; /* keeps it off even when hovering */
 }
 
 
