@@ -1,94 +1,86 @@
-/* ===== Reset ===== */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-/* ===== Theme ===== */
-:root{
-  --bee-yellow:#ffcc00;
-  --paper:#fff8e7;
-  --ink:#333;
-  --card:#fff;
-  --shadow:0 2px 10px rgba(0,0,0,.08);
-  --venmo:#3d95ce;
-  --venmo-hover:#327aa8;
+/* Reset + general styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff8e7;
+  color: #333;
 }
 
-/* ===== Base ===== */
-html, body { height: 100%; }
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--paper);
-  color: var(--ink);
+/* Header */
+header {
+  background-color: #ffcc00;
+  text-align: center;
+  padding: 20px 10px;
 }
 
-/* ===== Header / Footer ===== */
-.site-header{
-  background: var(--bee-yellow);
-  text-align:center;
-  padding: 24px 12px;
-}
-.site-header h1{ margin-bottom:6px; font-size:2rem; }
-.site-header p{ font-weight:500; }
-
-.site-footer{
-  background: var(--bee-yellow);
-  text-align:center;
-  padding:12px;
-  margin-top:36px;
-  font-weight:700;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
-/* ===== Centered column ===== */
-.container{
-  max-width: 760px;       /* <- classic centered width (matches your good pic) */
-  margin: 24px auto;      /* <- centers the stack */
-  padding: 0 16px;        /* side breathing room on phones */
+header p {
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Card sections */
+main {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* ===== Cards ===== */
-.card{
-  background: var(--card);
-  border-radius: 12px;
+.card {
+  background: white;
   padding: 20px;
-  box-shadow: var(--shadow);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.card h2{ margin-bottom: 10px; color:#222; }
 
-/* ===== Lists ===== */
-.bullet-list{
-  list-style: disc;
-  padding-left: 24px;
-  margin-bottom: 12px;
+/* Headings */
+h2 {
+  color: #222;
+  margin-bottom: 10px;
 }
-.bullet-list li{ margin: 6px 0; }
 
-/* ===== Donate button (no bullet) ===== */
-.donate-row{
-  margin-left: 24px;      /* lines the button up with list text */
-  margin-top: 6px;
+/* Lists */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
 }
-.donate-button{
-  display: inline-block;
-  background: var(--venmo);
-  color:#fff;
-  text-decoration:none;
+
+/* Donate button */
+.donate-container {
+  margin-top: 15px;
+  text-align: left;     /* CHANGED from center */
+  padding-left: 24px;   /* NEW: nudges button to align with list text */
+}
+
+.donate-button {
+  background-color: #3d95ce;
+  color: white;
   padding: 12px 22px;
   border-radius: 8px;
-  font-weight: 700;
-  transition: background .2s, transform .1s;
-}
-.donate-button:hover{
-  background: var(--venmo-hover);
-  transform: scale(1.04);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
-/* Links */
-a{ color:#1a73e8; }
-a:hover{ text-decoration: underline; }
+.donate-button:hover {
+  background-color: #327aa8;
+  text-decoration: none;
+  transform: scale(1.05);
+}
 
-/* Small screens */
-@media (max-width:520px){
-  .donate-button{ padding:10px 18px; }
+/* Footer */
+footer {
+  background-color: #ffcc00;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  font-weight: bold;
 }
