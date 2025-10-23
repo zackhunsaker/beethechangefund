@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Bee The Change Fund</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <h1>🐝 Bee The Change Fund</h1>
     <p>Supporting local causes & mental health. Bee kind. Bee the change.</p>
   </header>
 
-  <main>
+  <main class="container">
     <section class="card">
       <h2>About Us</h2>
       <p>We’re a nonprofit based in Logan, Utah, supporting community mental health and local causes through donations and events.</p>
@@ -19,15 +20,19 @@
 
     <section class="card">
       <h2>How You Can Help</h2>
-      <ul>
-        <li>Donate clothes (leggings, short & long sleeve shirts)</li>
+      <ul class="bullet-list">
+        <li>Donate clothes (leggings, short &amp; long sleeve shirts)</li>
         <li>Share our mission and spread kindness 🐝</li>
       </ul>
 
-      <div class="donate-container">
-        <a href="https://venmo.com/beethechangefund" target="_blank" class="donate-button">
-          💛 Donate on Venmo
-        </a>
+      <!-- Separate row (not in the UL) so there is no bullet -->
+      <div class="donate-row">
+        <a
+          href="https://venmo.com/beethechangefund"
+          target="_blank"
+          class="donate-button"
+          rel="noopener noreferrer"
+        >💛 Donate on Venmo</a>
       </div>
     </section>
 
@@ -39,7 +44,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>© 2025 Bee The Change Fund</p>
   </footer>
 </body>
