@@ -29,9 +29,9 @@ main {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 30px;           /* more space between boxes */
-  max-width: 750px;    /* keeps it centered like your old layout */
-  margin: 0 auto;      /* centers horizontally */
+  gap: 30px;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 .card {
@@ -79,8 +79,21 @@ ul {
 
 /* Contact section spacing */
 .contact-card p {
-  margin: 10px 0;     /* adds spacing between contact lines */
-  line-height: 1.6;   /* makes contact info easier to read */
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Flyer styling */
+.flyer-container {
+  text-align: center;
+}
+
+.flyer {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-top: 10px;
 }
 
 /* Footer */
@@ -88,6 +101,6 @@ footer {
   background-color: #ffcc00;
   text-align: center;
   padding: 10px;
-  margin-top: 60px;   /* pushes footer closer to bottom */
+  margin-top: 60px;
   font-weight: bold;
 }
