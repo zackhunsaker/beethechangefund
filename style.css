@@ -89,10 +89,11 @@ ul {
 }
 
 .flyer {
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;        /* ✅ keeps flyer from being too big */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   margin-top: 10px;
 }
 
@@ -103,4 +104,19 @@ footer {
   padding: 10px;
   margin-top: 60px;
   font-weight: bold;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .flyer {
+    max-width: 100%;        /* ✅ full width on mobile */
+  }
 }
