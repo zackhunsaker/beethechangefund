@@ -45,14 +45,14 @@ main {
 h2 {
   color: #222;
   margin-bottom: 10px;
-  text-align: center; /* ✅ Ensures section headers are centered */
+  text-align: center;
 }
 
 /* Lists */
 ul {
   list-style-type: disc;
-  text-align: left; /* keeps bullets aligned nicely */
-  display: inline-block; /* centers list overall */
+  text-align: left;
+  display: inline-block;
   margin: 0 auto 15px;
   padding-left: 20px;
 }
@@ -91,12 +91,15 @@ ul {
 }
 
 .flyer {
-  width: 100%;
-  max-width: 450px;        /* ✅ limits how wide it gets */
+  width: 90%;             /* responsive scaling */
+  max-width: 300px;       /* ✅ hard limit for large screens */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Footer */
@@ -119,6 +122,6 @@ footer {
   }
 
   .flyer {
-    max-width: 100%; /* ✅ full width on small screens */
+    max-width: 250px; /* ✅ slightly smaller on mobile */
   }
 }
